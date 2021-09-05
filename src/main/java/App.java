@@ -9,22 +9,22 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.print("Nhập số nguyên dương: ");
-        int a = new Scanner(System.in).nextInt();
-        if (checkValidMonth(a)) {
-            System.out.format("%d là một tháng trong năm\n", a);
-            System.out.format("Tháng %d có %d ngày\n", a, checkDayofMonth(a));
+        int n = new Scanner(System.in).nextInt();
+        if (checkValidMonth(n)) {
+            System.out.format("%d là một tháng trong năm\n", n);
+            System.out.format("Tháng %d có %d ngày\n", n, checkDayofMonth(n));
         } else {
-            System.out.format("%d không phải là một tháng trong năm\n", a);
+            System.out.format("%d không phải là một tháng trong năm\n", n);
         }
     }
 
-    public static boolean checkValidMonth(int a) {
-        return (a > 0 && a <= 12);
+    public static boolean checkValidMonth(int n) {
+        return (n > 0 && n <= 12);
     }
 
-    public static int checkDayofMonth(int a) {
-        if (checkValidMonth(a)) {
-            switch (a) {
+    public static int checkDayofMonth(int n) {
+        if (checkValidMonth(n)) {
+            switch (n) {
                 case 1:
                 case 3:
                 case 5:
